@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-<header>
+    <header>
     <?php
+    //Shows the navbar menu
     wp_nav_menu(
             array(
                     'theme_location' => 'main-menu'

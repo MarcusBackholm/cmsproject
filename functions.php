@@ -20,12 +20,27 @@ add_action('wp_enqueue_scripts', 'load_css', 'after_setup_theme', 'register_navw
 
 add_theme_support('menus');
 
+
+add_action('widgets_init', 'theme_slug_widgets_init');
+function theme_slug_widgets_init()
+{
+    register_sidebar(array(
+        'name' => __('Main Sidebar', 'theme-slug'),
+        'id' => 'sidebar-1',
+        'description' => __('Widgets in this area will be shown on all posts and pages.', 'theme-slug'),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ));
+}
+
 register_nav_menus(
 
     array(
 
         'main-menu' => 'primary',
-        'footer-menu' => 'Footer menu location'
+
     )
 
 );
