@@ -25,7 +25,7 @@ register_nav_menus(
     array(
 
         'main-menu' => 'primary',
-
+        'footer-menu' => 'Footer menu location'
     )
 
 );
